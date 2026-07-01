@@ -61,6 +61,6 @@
   bar.className = 'mobile-cta-bar';
   bar.innerHTML =
     '<a class="tel" href="tel:055-812-8275">📞 전화 문의</a>' +
-    '<a class="reserve" href="index.html#reserve">예약 요청</a>';
+    '<a class="reserve" href="index.html#reserve-form">예약 요청</a>';
   document.body.appendChild(bar);
 })();
