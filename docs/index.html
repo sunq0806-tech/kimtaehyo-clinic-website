@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김태효탑내과의원 — 진주 평거동 내과·건강검진·내시경</title>
+<meta name="description" content="경상대학교병원 소화기내과 정교수 출신 김태효 원장이 진료하는 진주 평거동 내과. 건강검진, 위·대장내시경, 초음파, 만성질환 관리(웰체크).">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-row">
+    <a href="#top" style="display:flex;align-items:center">
+      <img class="logo-img" src="images/logo.png" alt="김태효탑내과의원" onerror="this.classList.add('img-missing')">
+      <div class="logo">김태효탑내과<span>의원</span></div>
+    </a>
+    <nav>
+      <ul class="gnb">
+        <li><a href="about.html">병원소개</a></li>
+        <li><a href="checkup.html">건강검진</a></li>
+        <li><a href="endoscopy.html">위·대장내시경</a></li>
+        <li><a href="ultrasound.html">초음파</a></li>
+        <li><a href="wellcheck.html">웰체크</a></li>
+        <li><a href="#reserve">예약요청</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="tel-btn" href="tel:055-812-8275">📞 055-812-8275</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">진주 평거동 · 내과 · 건강검진 · 내시경</div>
+      <h1 class="hero-h">전 경상대학교병원 소화기내과<br>정교수가 진료하는<br><em>지역 주치의 내과</em></h1>
+      <p class="hero-sub">김태효탑내과의원 — 건강검진, 위·대장내시경, 초음파, 만성질환 관리(웰체크)까지 한 곳에서 진료합니다.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="#reserve">예약 요청하기</a>
+        <a class="btn ghost" href="tel:055-812-8275">전화 문의</a>
+        <a class="btn ghost" href="#location">오시는 길</a>
+      </div>
+    </div>
+    <div class="photo-slot hero-photo" data-fallback="병원 외관 · 진료 사진 자리">
+      <img src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
+    </div>
+  </div>
+</section>
+
+<div class="pullquote">
+  <div class="wrap">
+    <span class="mark">“</span>
+    <p>환자와 함께 이해하고 치료하는 주치의<span>김태효탑내과의원이 처음부터 지켜온 진료 원칙입니다</span></p>
+  </div>
+</div>
+
+<section id="reserve">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Reservation</div>
+      <h2>3단계로 간편하게 예약을 요청하세요</h2>
+      <p>회원가입 없이 진료 항목과 희망 시간만 남기시면, 병원에서 확인 후 전화 또는 문자로 안내드립니다.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3>진료 항목 선택</h3><p>건강검진 · 내시경 · 초음파 · 만성질환 관리 중 필요한 항목을 선택합니다.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>희망 날짜·시간 입력</h3><p>방문 가능한 날짜와 시간대를 남겨주세요.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>병원 확인 후 안내</h3><p>병원에서 가능 여부를 확인한 뒤 전화 또는 문자로 안내드립니다.</p></div>
+    </div>
+
+    <div class="reserve-wrap" style="margin-top:52px">
+      <form class="reserve-form" id="reserveForm">
+        <div class="field">
+          <label for="f-name">이름</label>
+          <input id="f-name" type="text" required placeholder="홍길동">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-tel">연락처</label>
+            <input id="f-tel" type="tel" required placeholder="010-0000-0000">
+          </div>
+          <div class="field">
+            <label for="f-item">희망 진료 항목</label>
+            <select id="f-item" required>
+              <option value="">선택해주세요</option>
+              <option>건강검진</option>
+              <option>위·대장내시경</option>
+              <option>초음파 검사</option>
+              <option>만성질환 관리(웰체크)</option>
+              <option>기타 진료 상담</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-date">희망 날짜</label>
+            <input id="f-date" type="date" required>
+            <span class="field-hint">일요일·법정공휴일은 휴진, 토요일은 13:30까지만 예약 가능합니다</span>
+          </div>
+          <div class="field">
+            <label for="f-time">희망 시간대</label>
+            <select id="f-time" required disabled>
+              <option value="">날짜를 먼저 선택해주세요</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-memo">문의 내용 (선택)</label>
+          <textarea id="f-memo" rows="3" placeholder="증상이나 궁금한 점을 간단히 남겨주세요"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" required>
+          예약 요청 및 안내 연락을 위한 개인정보 수집·이용에 동의합니다.
+        </label>
+        <button class="submit-btn" type="submit">예약 요청하기</button>
+      </form>
+
+      <div class="confirm-box" id="confirmBox">
+        <h3>예약 요청이 접수되었습니다</h3>
+        <p>김태효탑내과의원에서 진료 가능 여부와 일정을 확인한 뒤 입력하신 연락처로 안내드리겠습니다.</p>
+        <p>긴급한 증상이나 당일 진료 문의는 전화로 확인해주세요.</p>
+        <div class="tel-line">📞 055-812-8275</div>
+      </div>
+      <div class="step-note" id="idleNote" style="align-self:start">
+        <b>안내</b> 이 예약 폼은 포트폴리오용 프로토타입입니다. 실제 운영 시에는 병원 관리자 페이지 또는 문자 알림 연동이 필요합니다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkup" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">대표 진료</div>
+      <h2>필요하신 진료를 바로 확인하세요</h2>
+    </div>
+    <div class="cards">
+      <a class="fcard" href="checkup.html"><div class="mark">01</div><h3>건강검진</h3><p>국가건강검진·3대암검진·예방접종, 검진 전 준비사항 안내 →</p></a>
+      <a class="fcard" href="endoscopy.html"><div class="mark">02</div><h3>위·대장내시경</h3><p>수면내시경, 당일 용종절제술, 검사 전 준비사항 →</p></a>
+      <a class="fcard" href="ultrasound.html"><div class="mark">03</div><h3>초음파 검사</h3><p>복부·갑상선·경동맥·간섬유화스캔(경남유일) →</p></a>
+      <a class="fcard" href="wellcheck.html"><div class="mark">04</div><h3>만성질환 관리</h3><p>고혈압·당뇨 등, 웰체크 앱으로 지속 관리 →</p></a>
+      <div class="fcard"><div class="mark">05</div><h3>오시는길</h3><p>대양빌딩 2층, 주차 안내, 진료시간 확인</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap content-block">
+    <div class="cb-copy">
+      <div class="eyebrow">왜 김태효탑내과인가</div>
+      <h2 style="font-size:27px;margin-top:10px">환자 여러분의 아픔을<br>함께하는 김태효탑내과입니다</h2>
+      <p style="color:var(--ink-soft);font-size:15px;margin-top:14px">전 경상대학교 의과대학 정교수 출신 대표원장이 미국 Mayo Clinic 연수 경험과 함께 직접 진료합니다. 대학병원급 장비, 대학병원 출신 간호사(RN), 철저한 감염관리까지 — 동네 내과에서 받기 어려운 수준의 진료를 약속드립니다.</p>
+      <div class="badge-row">
+        <span class="badge">정교수 출신 대표원장</span>
+        <span class="badge">경남유일 간섬유화스캔</span>
+        <span class="badge">대학병원 출신 간호사(RN)</span>
+      </div>
+      <div class="btn-row" style="margin-top:24px">
+        <a class="btn primary" href="about.html">병원소개 자세히 보기 →</a>
+      </div>
+    </div>
+    <div class="photo-slot cb-media" data-fallback="원장 진료 사진 자리" style="aspect-ratio:4/3.3">
+      <img src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap facility-grid">
+    <div class="facility-photos">
+      <div class="photo-slot" data-fallback="병원 접수데스크 · 인테리어 자리">
+        <img src="images/interior1.png" alt="김태효탑내과의원 접수데스크 및 대기 공간" onerror="this.parentElement.classList.add('img-missing')">
+      </div>
+      <div class="photo-slot" data-fallback="내시경 장비 자리">
+        <img src="images/State-of-the-art medical equipment3.png" alt="대학병원급 내시경 장비" onerror="this.parentElement.classList.add('img-missing')">
+      </div>
+      <div class="photo-slot" data-fallback="화장실 · 위생시설 자리">
+        <img src="images/interior2.png" alt="청결하게 관리되는 화장실 시설" onerror="this.parentElement.classList.add('img-missing')">
+      </div>
+      <div class="photo-slot" data-fallback="영상진단 장비 자리">
+        <img src="images/State-of-the-art medical equipment2.png" alt="디지털 엑스레이 진단 장비" onerror="this.parentElement.classList.add('img-missing')">
+      </div>
+    </div>
+    <div class="facility-copy">
+      <div class="eyebrow">시설과 장비</div>
+      <h2 style="font-size:26px;font-weight:800;margin:12px 0 4px">대학병원급 장비와<br>최고의 의료진</h2>
+      <h3>대학병원급 최신 의료장비</h3>
+      <p>대학병원에서 사용하던 것과 동일한 수준의 장비를 갖추었습니다. 내시경 검사에는 올림푸스 EVIS LUCERA ELITE 시스템을, 영상 진단에는 디지털 엑스레이 장비를 사용하며, 신의료기술을 적시에 도입해 진료의 질을 유지합니다.</p>
+      <h3>최고의 의료진</h3>
+      <p>대학병원 출신 간호사(RN)가 함께 근무하여, 검진과 시술 전 과정에서 안전하고 수준 높은 관리를 제공합니다.</p>
+      <h3>깨끗하고 안전한 시설</h3>
+      <p>밝고 깔끔한 내부 시설을 항상 청결하게 유지합니다. 검사 장비는 매번 소독하고 일회용 소모품을 사용해 위생 관리를 최우선으로 합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>방문 전 궁금한 점</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">건강검진은 예약이 필요한가요? <span class="faq-mark">+</span></summary>
+        <div class="faq-a">검진 항목에 따라 사전 전화 또는 예약 요청을 권장합니다. 국가건강검진은 대상 여부를 먼저 확인해주세요.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">대장내시경 전 준비는 어떻게 하나요? <span class="faq-mark">+</span></summary>
+        <div class="faq-a">금식, 장정결제 복용, 복용 중인 약 확인이 필요합니다. 예약 시 자세한 준비 안내를 드립니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">수면내시경 후 운전 가능한가요? <span class="faq-mark">+</span></summary>
+        <div class="faq-a">당일 운전은 제한되며 보호자 동행을 권장합니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">주차는 가능한가요? <span class="faq-mark">+</span></summary>
+        <div class="faq-a">대양빌딩 건물 및 주변 공간에 주차하실 수 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">예약 요청 후 바로 확정되나요? <span class="faq-mark">+</span></summary>
+        <div class="faq-a">병원에서 확인 후 전화 또는 문자로 안내드립니다. 실시간 자동 확정은 아닙니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="location" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">오시는 길</div>
+      <h2>대양빌딩 2층, 찾아오시는 길을 안내드립니다</h2>
+    </div>
+    <div class="location-grid">
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps?q=%EA%B9%80%ED%83%9C%ED%9A%A8%ED%83%91%EB%82%B4%EA%B3%BC%EC%9D%98%EC%9B%90%20%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%88%9C%ED%99%98%EB%A1%9C%20530&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="김태효탑내과의원 위치 지도"></iframe>
+      </div>
+      <div class="location-info">
+        <div class="addr">경남 진주시 순환로 530 대양빌딩 2층</div>
+        <div class="row"><b>전화</b><span>055-812-8275</span></div>
+        <div class="row"><b>진료시간</b><span>평일 08:30~18:20 (점심 13:00~14:00) · 토요일 08:30~14:00 · 일요일·법정공휴일 휴무</span></div>
+        <div class="row"><b>주차</b><span>대양빌딩 건물 및 주변 공간 이용 가능</span></div>
+        <div class="map-btn-row">
+          <a class="btn primary" href="https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%88%9C%ED%99%98%EB%A1%9C%20530%20%EB%8C%80%EC%96%91%EB%B9%8C%EB%94%A9" target="_blank" rel="noopener">네이버 지도로 길찾기</a>
+          <a class="btn ghost" href="tel:055-812-8275">전화 문의</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="final-cta">
+      <div>
+        <h2>지금 예약을 요청하세요</h2>
+        <p>경남 진주시 순환로 530 대양빌딩 2층 · 평일 08:30~18:20 (점심 13:00~14:00) · 토요일 08:30~14:00 · 일요일·법정공휴일 휴무</p>
+      </div>
+      <div class="tel-big"><span>급한 문의는 전화로</span>055-812-8275</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>김태효탑내과의원</h4>
+        <p>경남 진주시 순환로 530 대양빌딩 2층</p>
+        <p>055-812-8275 · 대표원장 김태효</p>
+        <p>평일 08:30~18:20 (점심 13:00~14:00) · 토요일 08:30~14:00 · 일요일·법정공휴일 휴무</p>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <p><a href="about.html">병원소개</a></p>
+        <p><a href="checkup.html">건강검진</a></p>
+        <p><a href="endoscopy.html">위·대장내시경</a></p>
+        <p><a href="ultrasound.html">초음파 클리닉</a></p>
+        <p><a href="wellcheck.html">웰체크</a></p>
+        <p><a href="#reserve">예약요청</a></p>
+        <p><a href="#location">오시는길</a></p>
+      </div>
+      <div>
+        <h4>법적 고지</h4>
+        <p>개인정보처리방침</p>
+        <p>사업자정보 확인</p>
+      </div>
+    </div>
+    <div class="foot-legal">본 홈페이지는 의료법 및 의료광고 심의 기준을 준수하여 제작되었습니다. 진료·검사 결과는 개인에 따라 차이가 있을 수 있으며, 본 페이지는 포트폴리오 목적의 프로토타입입니다.</div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+// 2026년 대한민국 법정공휴일 (매년 갱신 필요)
+const HOLIDAYS_2026 = [
+  '2026-01-01', // 신정
+  '2026-02-16', '2026-02-17', '2026-02-18', // 설날 연휴
+  '2026-03-01', '2026-03-02', // 삼일절 및 대체공휴일
+  '2026-05-01', // 근로자의날
+  '2026-05-05', // 어린이날
+  '2026-05-24', '2026-05-25', // 부처님오신날 및 대체공휴일
+  '2026-06-06', // 현충일
+  '2026-07-17', // 제헌절
+  '2026-08-15', '2026-08-17', // 광복절 및 대체공휴일
+  '2026-09-24', '2026-09-25', '2026-09-26', // 추석 연휴
+  '2026-10-03', // 개천절
+  '2026-10-09', // 한글날
+  '2026-12-25'  // 성탄절
+];
+
+const dateInput = document.getElementById('f-date');
+const timeSelect = document.getElementById('f-time');
+
+function pad2(n){ return n < 10 ? '0' + n : '' + n; }
+
+function formatSlot(mins){
+  const h = Math.floor(mins / 60), m = mins % 60;
+  const period = h < 12 ? '오전' : '오후';
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return period + ' ' + h12 + ':' + pad2(m);
+}
+
+function buildSlots(isSaturday){
+  const slots = [];
+  if (isSaturday) {
+    // 토요일: 08:30 ~ 13:30 (13:30 이후 예약 불가)
+    for (let t = 8 * 60 + 30; t <= 13 * 60 + 30; t += 30) slots.push(t);
+  } else {
+    // 평일: 08:30 ~ 12:30, 점심(13:00~14:00) 제외 후 14:00 ~ 18:00
+    for (let t = 8 * 60 + 30; t <= 12 * 60 + 30; t += 30) slots.push(t);
+    for (let t = 14 * 60; t <= 18 * 60; t += 30) slots.push(t);
+  }
+  return slots;
+}
+
+function refreshTimeOptions(){
+  const val = dateInput.value;
+  timeSelect.innerHTML = '';
+  if (!val) {
+    timeSelect.disabled = true;
+    timeSelect.appendChild(new Option('날짜를 먼저 선택해주세요', ''));
+    return;
+  }
+  timeSelect.disabled = false;
+  timeSelect.appendChild(new Option('선택해주세요', ''));
+  const isSaturday = new Date(val + 'T00:00:00').getDay() === 6;
+  buildSlots(isSaturday).forEach(function(mins){
+    const label = formatSlot(mins);
+    timeSelect.appendChild(new Option(label, label));
+  });
+}
+
+// 같은 입력에 대해 브라우저가 input 이벤트를 두 번 이상 보낼 때가 있어(특히 달력 UI로 선택할 때),
+// 짧은 시간 안에 들어온 중복 이벤트는 한 번만 처리하도록 디바운스 처리
+let dateCheckTimer = null;
+function handleDateInput(){
+  const val = dateInput.value;
+  if (!val) { refreshTimeOptions(); return; }
+  const day = new Date(val + 'T00:00:00').getDay();
+  if (day === 0) {
+    dateInput.value = '';
+    refreshTimeOptions();
+    alert('일요일은 휴진일입니다. 다른 날짜를 선택해주세요.');
+    return;
+  }
+  if (HOLIDAYS_2026.indexOf(val) !== -1) {
+    dateInput.value = '';
+    refreshTimeOptions();
+    alert('법정공휴일은 휴진일입니다. 다른 날짜를 선택해주세요.');
+    return;
+  }
+  refreshTimeOptions();
+}
+dateInput.addEventListener('input', function(){
+  clearTimeout(dateCheckTimer);
+  dateCheckTimer = setTimeout(handleDateInput, 60);
+});
+
+(function initDateField(){
+  const today = new Date();
+  dateInput.min = today.getFullYear() + '-' + pad2(today.getMonth() + 1) + '-' + pad2(today.getDate());
+  refreshTimeOptions();
+})();
+
+// 구글 폼(예약요청) 제출 주소 — 구글 시트에 자동 저장되고, 시트의 알림 설정으로 이메일도 발송됩니다.
+const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSd9qVsgteoBtgjJlqdmOiQZFKY9hXhpjuy3RsGRrUfDcHBvyw/formResponse';
+const FORM_FIELDS = {
+  name: 'entry.631252392',
+  tel: 'entry.143630468',
+  item: 'entry.878048327',
+  date: 'entry.951654574',
+  time: 'entry.654821154',
+  memo: 'entry.718662314'
+};
+
+document.getElementById('reserveForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = this;
+
+  const body = new URLSearchParams();
+  body.append(FORM_FIELDS.name, document.getElementById('f-name').value);
+  body.append(FORM_FIELDS.tel, document.getElementById('f-tel').value);
+  body.append(FORM_FIELDS.item, document.getElementById('f-item').value);
+  body.append(FORM_FIELDS.date, document.getElementById('f-date').value);
+  body.append(FORM_FIELDS.time, document.getElementById('f-time').value);
+  body.append(FORM_FIELDS.memo, document.getElementById('f-memo').value);
+
+  function showConfirm(){
+    form.style.display = 'none';
+    document.getElementById('idleNote').style.display = 'none';
+    document.getElementById('confirmBox').classList.add('show');
+  }
+
+  fetch(FORM_ACTION, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: body
+  })
+    .then(showConfirm)
+    .catch(function(){
+      alert('예약 요청 전송 중 문제가 발생했습니다. 전화로 문의해주세요: 055-812-8275');
+    });
+});
+</script>
+</body>
+</html>
