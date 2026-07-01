@@ -24,8 +24,9 @@ p,span,a,li,label,button,input,select,textarea,div{word-break:keep-all}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 
 /* ---------- header ---------- */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(252,251,248,.92);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);transition:padding .2s ease}
+.site-header{position:sticky;top:0;z-index:50;background:var(--paper-alt);
+  border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(22,33,46,.03),0 6px 16px -12px rgba(22,33,46,.12);
+  transition:padding .2s ease}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 28px;max-width:var(--maxw);margin:0 auto}
 .logo{font-weight:800;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
 .logo span{color:var(--gold-deep)}
