@@ -122,9 +122,6 @@
         <p>긴급한 증상이나 당일 진료 문의는 전화로 확인해주세요.</p>
         <div class="tel-line">📞 055-812-8275</div>
       </div>
-      <div class="step-note" id="idleNote" style="align-self:start">
-        <b>안내</b> 이 예약 폼은 포트폴리오용 프로토타입입니다. 실제 운영 시에는 병원 관리자 페이지 또는 문자 알림 연동이 필요합니다.
-      </div>
     </div>
   </div>
 </section>
@@ -409,7 +406,6 @@ document.getElementById('reserveForm').addEventListener('submit', function(e){
 
   function showConfirm(){
     form.style.display = 'none';
-    document.getElementById('idleNote').style.display = 'none';
     document.getElementById('confirmBox').classList.add('show');
   }
 
