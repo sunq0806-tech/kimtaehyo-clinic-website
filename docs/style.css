@@ -239,6 +239,19 @@ footer{padding:56px 0 40px;border-top:1px solid var(--line)}
   .exam-cards{grid-template-columns:1fr}
 }
 
+/* ---------- legal document pages (privacy, pricing) ---------- */
+.legal-doc{max-width:720px;padding-top:8px}
+.legal-doc h2{font-size:17px;font-weight:800;margin:34px 0 10px}
+.legal-doc h2:first-child{margin-top:0}
+.legal-doc p{font-size:14.5px;color:var(--ink-soft);margin:0 0 10px;line-height:1.75}
+.legal-doc p b{color:var(--ink)}
+.legal-doc .doc-date{margin-top:28px;font-family:var(--mono);font-size:12.5px;color:var(--ink-faint)}
+.legal-doc ul{margin:10px 0 14px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.legal-doc ul li{display:flex;gap:14px;align-items:baseline;background:var(--paper-alt);
+  border:1px solid var(--line);border-radius:6px;padding:12px 15px;font-size:14px;color:var(--ink-soft);line-height:1.65}
+.legal-doc ul li b{flex-shrink:0;font-family:var(--mono);font-size:11px;font-weight:700;
+  color:var(--gold-deep);letter-spacing:.03em;white-space:nowrap}
+
 /* ---------- about page: profile & gallery ---------- */
 .profile-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:64px 0}
 .profile-grid .cb-copy p{color:var(--ink-soft);font-size:15px;margin:0 0 10px}
