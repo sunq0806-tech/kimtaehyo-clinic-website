@@ -54,6 +54,10 @@
     if (gnb.contains(e.target) || toggle.contains(e.target)) return;
     closeMenu();
   });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && gnb.classList.contains('open')) closeMenu();
+  });
 })();
 
 (function(){

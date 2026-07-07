@@ -12,8 +12,15 @@
 <meta property="og:title" content="김태효탑내과의원 — 진주 평거동 내과·건강검진·내시경">
 <meta property="og:description" content="경상대학교병원 소화기내과 정교수 출신 김태효 원장이 진료하는 진주 평거동 내과. 건강검진, 위·대장내시경, 초음파, 만성질환 관리(웰체크).">
 <meta property="og:url" content="https://kimtaehyo-clinic-website.vercel.app/">
-<meta property="og:image" content="https://kimtaehyo-clinic-website.vercel.app/images/doctor.png">
+<meta property="og:image" content="https://kimtaehyo-clinic-website.vercel.app/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="김태효탑내과의원 로고 — 진주 평거동 내과">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#fcfbf8">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -32,6 +39,7 @@
     "addressCountry": "KR"
   },
   "medicalSpecialty": ["Gastroenterologic", "PrimaryCare"],
+  "hasMap": "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EC%A7%84%EC%A3%BC%EC%8B%9C%20%EC%88%9C%ED%99%98%EB%A1%9C%20530%20%EB%8C%80%EC%96%91%EB%B9%8C%EB%94%A9",
   "availableService": [
     {"@type": "MedicalTest", "name": "국가건강검진"},
     {"@type": "MedicalTest", "name": "위내시경"},
@@ -51,6 +59,43 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "건강검진은 예약이 필요한가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "검진 항목에 따라 사전 전화 또는 예약 요청을 권장합니다. 국가건강검진은 대상 여부를 먼저 확인해주세요."}
+    },
+    {
+      "@type": "Question",
+      "name": "대장내시경 전 준비는 어떻게 하나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "금식, 장정결제 복용, 복용 중인 약 확인이 필요합니다. 예약 시 자세한 준비 안내를 드립니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "수면내시경 후 운전 가능한가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "당일 운전은 제한되며 보호자 동행을 권장합니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "주차는 가능한가요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "대양빌딩 건물 및 주변 공간에 주차하실 수 있습니다."}
+    },
+    {
+      "@type": "Question",
+      "name": "예약 요청 후 바로 확정되나요?",
+      "acceptedAnswer": {"@type": "Answer", "text": "병원에서 확인 후 전화 또는 문자로 안내드립니다. 실시간 자동 확정은 아닙니다."}
+    }
+  ]
+}
+</script>
+<!-- ▼ 사이트 소유확인 메타태그는 이 줄 아래에 붙여넣으세요 (구글 서치콘솔 · 네이버 서치어드바이저 / 같은 폴더의 트래킹코드_설치가이드.md 참고) -->
+
+<!-- ▼ GA4 등 분석 트래킹 코드는 이 줄 아래에 붙여넣으세요 -->
+
 </head>
 <body>
 
@@ -89,7 +134,7 @@
       </div>
     </div>
     <div class="photo-slot hero-photo" data-fallback="병원 외관 · 진료 사진 자리">
-      <img src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
+      <img fetchpriority="high" decoding="async" src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
     </div>
   </div>
 </section>
@@ -118,12 +163,12 @@
       <form class="reserve-form" id="reserveForm">
         <div class="field">
           <label for="f-name">이름</label>
-          <input id="f-name" type="text" required placeholder="홍길동">
+          <input id="f-name" type="text" required maxlength="30" autocomplete="name" placeholder="홍길동">
         </div>
         <div class="field-row">
           <div class="field">
             <label for="f-tel">연락처</label>
-            <input id="f-tel" type="tel" required placeholder="010-0000-0000">
+            <input id="f-tel" type="tel" required maxlength="20" autocomplete="tel" inputmode="tel" pattern="[0-9\-\s()+]{9,20}" title="연락 가능한 전화번호를 숫자로 입력해주세요" placeholder="010-0000-0000">
           </div>
           <div class="field">
             <label for="f-item">희망 진료 항목</label>
@@ -152,7 +197,7 @@
         </div>
         <div class="field">
           <label for="f-memo">문의 내용 (선택)</label>
-          <textarea id="f-memo" rows="3" placeholder="증상이나 궁금한 점을 간단히 남겨주세요"></textarea>
+          <textarea id="f-memo" rows="3" maxlength="500" placeholder="증상이나 궁금한 점을 간단히 남겨주세요"></textarea>
         </div>
         <label class="consent">
           <input type="checkbox" required>
@@ -213,7 +258,7 @@
       </div>
     </div>
     <div class="photo-slot cb-media" data-fallback="원장 진료 사진 자리" style="aspect-ratio:4/3.3">
-      <img src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
+      <img loading="lazy" decoding="async" src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
     </div>
   </div>
 </section>
@@ -222,16 +267,16 @@
   <div class="wrap facility-grid">
     <div class="facility-photos">
       <div class="photo-slot" data-fallback="병원 접수데스크 · 인테리어 자리">
-        <img src="images/interior1.png" alt="김태효탑내과의원 접수데스크 및 대기 공간" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/interior1.png" alt="김태효탑내과의원 접수데스크 및 대기 공간" onerror="this.parentElement.classList.add('img-missing')">
       </div>
       <div class="photo-slot" data-fallback="내시경 장비 자리">
-        <img src="images/equipment-3.png" alt="대학병원급 내시경 장비" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/equipment-3.png" alt="대학병원급 내시경 장비" onerror="this.parentElement.classList.add('img-missing')">
       </div>
       <div class="photo-slot" data-fallback="화장실 · 위생시설 자리">
-        <img src="images/interior2.png" alt="청결하게 관리되는 화장실 시설" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/interior2.png" alt="청결하게 관리되는 화장실 시설" onerror="this.parentElement.classList.add('img-missing')">
       </div>
       <div class="photo-slot" data-fallback="영상진단 장비 자리">
-        <img src="images/equipment-2.png" alt="디지털 엑스레이 진단 장비" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/equipment-2.png" alt="디지털 엑스레이 진단 장비" onerror="this.parentElement.classList.add('img-missing')">
       </div>
     </div>
     <div class="facility-copy">
@@ -346,21 +391,35 @@
 
 <script src="site.js"></script>
 <script>
-// 2026년 대한민국 법정공휴일 (매년 갱신 필요)
-const HOLIDAYS_2026 = [
+// 대한민국 법정공휴일 — 연말에 다음 해 목록을 추가해주세요
+// (제헌절은 2008년부터 공휴일이 아니므로 넣지 않습니다)
+const HOLIDAYS = [
+  // 2026년
   '2026-01-01', // 신정
   '2026-02-16', '2026-02-17', '2026-02-18', // 설날 연휴
   '2026-03-01', '2026-03-02', // 삼일절 및 대체공휴일
-  '2026-05-01', // 근로자의날
+  '2026-05-01', // 근로자의날 — 정상 진료하는 해에는 이 줄을 삭제하세요
   '2026-05-05', // 어린이날
   '2026-05-24', '2026-05-25', // 부처님오신날 및 대체공휴일
   '2026-06-06', // 현충일
-  '2026-07-17', // 제헌절
   '2026-08-15', '2026-08-17', // 광복절 및 대체공휴일
   '2026-09-24', '2026-09-25', '2026-09-26', // 추석 연휴
-  '2026-10-03', // 개천절
+  '2026-10-03', '2026-10-05', // 개천절 및 대체공휴일
   '2026-10-09', // 한글날
-  '2026-12-25'  // 성탄절
+  '2026-12-25', // 성탄절
+  // 2027년
+  '2027-01-01', // 신정
+  '2027-02-05', '2027-02-06', '2027-02-07', '2027-02-08', // 설날 연휴 및 대체공휴일
+  '2027-03-01', // 삼일절
+  '2027-05-01', // 근로자의날
+  '2027-05-05', // 어린이날
+  '2027-05-13', // 부처님오신날
+  '2027-06-06', // 현충일
+  '2027-08-15', '2027-08-16', // 광복절 및 대체공휴일
+  '2027-09-14', '2027-09-15', '2027-09-16', // 추석 연휴
+  '2027-10-03', '2027-10-04', // 개천절 및 대체공휴일
+  '2027-10-09', '2027-10-11', // 한글날 및 대체공휴일
+  '2027-12-25', '2027-12-27'  // 성탄절 및 대체공휴일
 ];
 
 const dateInput = document.getElementById('f-date');
@@ -388,6 +447,11 @@ function buildSlots(isSaturday){
   return slots;
 }
 
+function todayString(){
+  const now = new Date();
+  return now.getFullYear() + '-' + pad2(now.getMonth() + 1) + '-' + pad2(now.getDate());
+}
+
 function refreshTimeOptions(){
   const val = dateInput.value;
   timeSelect.innerHTML = '';
@@ -396,10 +460,22 @@ function refreshTimeOptions(){
     timeSelect.appendChild(new Option('날짜를 먼저 선택해주세요', ''));
     return;
   }
+  const isSaturday = new Date(val + 'T00:00:00').getDay() === 6;
+  let slots = buildSlots(isSaturday);
+  // 오늘 날짜라면 이미 지난 시간대는 제외 (최소 1시간 여유)
+  if (val === todayString()) {
+    const now = new Date();
+    const cutoff = now.getHours() * 60 + now.getMinutes() + 60;
+    slots = slots.filter(function(mins){ return mins >= cutoff; });
+  }
+  if (slots.length === 0) {
+    timeSelect.disabled = true;
+    timeSelect.appendChild(new Option('오늘은 예약 가능한 시간이 지났습니다 — 전화로 문의해주세요', ''));
+    return;
+  }
   timeSelect.disabled = false;
   timeSelect.appendChild(new Option('선택해주세요', ''));
-  const isSaturday = new Date(val + 'T00:00:00').getDay() === 6;
-  buildSlots(isSaturday).forEach(function(mins){
+  slots.forEach(function(mins){
     const label = formatSlot(mins);
     timeSelect.appendChild(new Option(label, label));
   });
@@ -418,7 +494,7 @@ function handleDateInput(){
     alert('일요일은 휴진일입니다. 다른 날짜를 선택해주세요.');
     return;
   }
-  if (HOLIDAYS_2026.indexOf(val) !== -1) {
+  if (HOLIDAYS.indexOf(val) !== -1) {
     dateInput.value = '';
     refreshTimeOptions();
     alert('법정공휴일은 휴진일입니다. 다른 날짜를 선택해주세요.');
@@ -432,8 +508,11 @@ dateInput.addEventListener('input', function(){
 });
 
 (function initDateField(){
-  const today = new Date();
-  dateInput.min = today.getFullYear() + '-' + pad2(today.getMonth() + 1) + '-' + pad2(today.getDate());
+  dateInput.min = todayString();
+  // 공휴일 목록이 준비된 범위까지만 예약을 받도록 최대 6개월 뒤로 제한
+  const limit = new Date();
+  limit.setMonth(limit.getMonth() + 6);
+  dateInput.max = limit.getFullYear() + '-' + pad2(limit.getMonth() + 1) + '-' + pad2(limit.getDate());
   refreshTimeOptions();
 })();
 
@@ -470,14 +549,19 @@ function showToast(){
 document.getElementById('reserveForm').addEventListener('submit', function(e){
   e.preventDefault();
   const form = this;
+  const submitBtn = form.querySelector('.submit-btn');
+  if (submitBtn.disabled) return; // 중복 제출 방지
 
   const body = new URLSearchParams();
-  body.append(FORM_FIELDS.name, document.getElementById('f-name').value);
-  body.append(FORM_FIELDS.tel, document.getElementById('f-tel').value);
+  body.append(FORM_FIELDS.name, document.getElementById('f-name').value.trim());
+  body.append(FORM_FIELDS.tel, document.getElementById('f-tel').value.trim());
   body.append(FORM_FIELDS.item, document.getElementById('f-item').value);
   body.append(FORM_FIELDS.date, document.getElementById('f-date').value);
   body.append(FORM_FIELDS.time, document.getElementById('f-time').value);
-  body.append(FORM_FIELDS.memo, document.getElementById('f-memo').value);
+  body.append(FORM_FIELDS.memo, document.getElementById('f-memo').value.trim());
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = '전송 중…';
 
   function showConfirm(){
     form.style.display = 'none';
@@ -492,6 +576,8 @@ document.getElementById('reserveForm').addEventListener('submit', function(e){
   })
     .then(showConfirm)
     .catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = '예약 요청하기';
       alert('예약 요청 전송 중 문제가 발생했습니다. 전화로 문의해주세요: 055-812-8275');
     });
 });

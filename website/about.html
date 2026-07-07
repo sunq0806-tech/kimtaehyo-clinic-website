@@ -12,9 +12,45 @@
 <meta property="og:title" content="병원소개 — 김태효탑내과의원">
 <meta property="og:description" content="진주 평거동 김태효탑내과의원 병원소개. 정교수 출신 김태효 대표원장 약력, 대학병원급 의료장비, 의료진, 내부시설 안내.">
 <meta property="og:url" content="https://kimtaehyo-clinic-website.vercel.app/about.html">
-<meta property="og:image" content="https://kimtaehyo-clinic-website.vercel.app/images/doctor.png">
+<meta property="og:image" content="https://kimtaehyo-clinic-website.vercel.app/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="김태효탑내과의원 로고 — 진주 평거동 내과">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#fcfbf8">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "김태효",
+  "jobTitle": "대표원장",
+  "url": "https://kimtaehyo-clinic-website.vercel.app/about.html",
+  "image": "https://kimtaehyo-clinic-website.vercel.app/images/doctor.png",
+  "medicalSpecialty": "Gastroenterologic",
+  "description": "의학박사, 내과 전문의, 소화기내과 전문의, 내시경세부전문의. 전 경상대학교 의과대학 정교수(2004~2020), 미국 Mayo Clinic 소화기내과 연수(2011~2013).",
+  "worksFor": {
+    "@type": "MedicalClinic",
+    "name": "김태효탑내과의원",
+    "url": "https://kimtaehyo-clinic-website.vercel.app/",
+    "telephone": "+82-55-812-8275",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "순환로 530 대양빌딩 2층",
+      "addressLocality": "진주시",
+      "addressRegion": "경상남도",
+      "addressCountry": "KR"
+    }
+  }
+}
+</script>
+<!-- ▼ 사이트 소유확인 메타태그는 이 줄 아래에 붙여넣으세요 (구글 서치콘솔 · 네이버 서치어드바이저 / 같은 폴더의 트래킹코드_설치가이드.md 참고) -->
+
+<!-- ▼ GA4 등 분석 트래킹 코드는 이 줄 아래에 붙여넣으세요 -->
+
 </head>
 <body>
 
@@ -52,7 +88,7 @@
       </div>
     </div>
     <div class="photo-slot hero-photo" data-fallback="병원 외관 · 원장 진료 사진 자리">
-      <img src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
+      <img fetchpriority="high" decoding="async" src="images/doctor.png" alt="김태효 원장 진료 모습" onerror="this.parentElement.classList.add('img-missing')">
     </div>
   </div>
 </section>
@@ -60,7 +96,7 @@
 <section class="alt">
   <div class="wrap profile-grid">
     <div class="profile-card photo-slot" data-fallback="원장 약력 카드 자리">
-      <img src="images/doctor-career-history.png" alt="SPECIALIST MEDICAL CARE — 김태효 원장 약력" onerror="this.parentElement.classList.add('img-missing')">
+      <img loading="lazy" decoding="async" src="images/doctor-career-history.png" alt="SPECIALIST MEDICAL CARE — 김태효 원장 약력" onerror="this.parentElement.classList.add('img-missing')">
     </div>
     <div class="cb-copy">
       <div class="eyebrow">정교수 출신의 대표원장</div>
@@ -79,7 +115,7 @@
 <section>
   <div class="wrap content-block">
     <div class="cb-media photo-slot" data-fallback="대학병원급 의료장비 자리">
-      <img src="images/equipment-1.png" alt="대학병원급 최신 의료장비" onerror="this.parentElement.classList.add('img-missing')">
+      <img loading="lazy" decoding="async" src="images/equipment-1.png" alt="대학병원급 최신 의료장비" onerror="this.parentElement.classList.add('img-missing')">
     </div>
     <div class="cb-copy">
       <div class="eyebrow">대학병원급 최신 의료장비</div>
@@ -92,7 +128,7 @@
 <section class="alt">
   <div class="wrap content-block reverse">
     <div class="cb-media photo-slot" data-fallback="의료진 자리">
-      <img src="images/about-nurse.png" alt="대학병원 출신 간호사(RN)" onerror="this.parentElement.classList.add('img-missing')">
+      <img loading="lazy" decoding="async" src="images/about-nurse.png" alt="대학병원 출신 간호사(RN)" onerror="this.parentElement.classList.add('img-missing')">
     </div>
     <div class="cb-copy">
       <div class="eyebrow">최고의 의료진</div>
@@ -111,13 +147,13 @@
     </div>
     <div class="gallery-grid">
       <div class="photo-slot" data-fallback="접수데스크 자리">
-        <img src="images/interior1.png" alt="김태효탑내과 접수데스크 및 대기 공간" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/interior1.png" alt="김태효탑내과 접수데스크 및 대기 공간" onerror="this.parentElement.classList.add('img-missing')">
       </div>
       <div class="photo-slot" data-fallback="내부시설 자리">
-        <img src="images/interior2.png" alt="청결하게 관리되는 내부 시설" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/interior2.png" alt="청결하게 관리되는 내부 시설" onerror="this.parentElement.classList.add('img-missing')">
       </div>
       <div class="photo-slot" data-fallback="의료장비 자리">
-        <img src="images/equipment-2.png" alt="디지털 엑스레이 진단 장비" onerror="this.parentElement.classList.add('img-missing')">
+        <img loading="lazy" decoding="async" src="images/equipment-2.png" alt="디지털 엑스레이 진단 장비" onerror="this.parentElement.classList.add('img-missing')">
       </div>
     </div>
   </div>

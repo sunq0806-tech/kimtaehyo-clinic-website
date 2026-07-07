@@ -1,0 +1,18 @@
+# 김태효탑내과의원 (Kim Taehyo Top Internal Medicine Clinic)
+
+> 경남 진주시 평거동의 내과 의원. 전 경상대학교병원 소화기내과 정교수 출신 김태효 원장(의학박사, 내과·소화기내과 전문의, 내시경세부전문의)이 직접 진료합니다.
+
+- 주소: 경남 진주시 순환로 530 대양빌딩 2층
+- 전화: 055-812-8275
+- 진료시간: 평일 08:30~18:20 (점심 13:00~14:00), 토요일 08:30~14:00, 일요일·법정공휴일 휴무
+- 주요 진료: 국가건강검진, 3대암검진, 위·대장내시경(수면내시경·당일 용종절제), 복부·갑상선·경동맥·심장 초음파, 간섬유화스캔(FibroScan), 고혈압·당뇨 등 만성질환 관리(웰체크 앱 연계)
+
+## 주요 페이지
+
+- [홈·예약 요청](https://kimtaehyo-clinic-website.vercel.app/): 진료 안내, 온라인 예약 요청 폼, 오시는 길
+- [병원소개](https://kimtaehyo-clinic-website.vercel.app/about.html): 원장 약력, 의료진, 시설·장비
+- [건강검진](https://kimtaehyo-clinic-website.vercel.app/checkup.html): 국가건강검진·3대암검진 대상과 준비사항
+- [위·대장내시경](https://kimtaehyo-clinic-website.vercel.app/endoscopy.html): 검사 대상, 수면내시경, 검사 전 준비 안내
+- [초음파](https://kimtaehyo-clinic-website.vercel.app/ultrasound.html): 복부·갑상선·경동맥·심장 초음파 안내
+- [만성질환 관리](https://kimtaehyo-clinic-website.vercel.app/wellcheck.html): 웰체크 앱 기반 고혈압·당뇨 관리
+- [비급여 진료비용](https://kimtaehyo-clinic-website.vercel.app/pricing.html): 의료법 제45조에 따른 비급여 비용 고지
